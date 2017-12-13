@@ -27,9 +27,9 @@
     [super viewDidAppear:animated];
     NSMutableArray *annotations = [[NSMutableArray alloc] init];
     
-    for (int i = 0; i < 100; i++) {
-        double x = -104.0 + arc4random_uniform(10);
-        double y = 39.5 + arc4random_uniform(10);
+    for (int i = 0; i < 1000; i++) {
+        double x = -104.0 + arc4random_uniform(20);
+        double y = 39.5 + arc4random_uniform(20);
         
         MKPointAnnotation* pointAnnotation = [[MKPointAnnotation alloc] init];
         pointAnnotation.coordinate = CLLocationCoordinate2DMake(y, x);
@@ -62,7 +62,7 @@
 
     UIAlertController * alert = [UIAlertController
                                  alertControllerWithTitle:@"Tapped"
-                                 message:@"Map Pin tapped"
+                                 message:@"Map Pin accessory tapped"
                                  preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* okButton = [UIAlertAction
                                actionWithTitle:@"OK"
