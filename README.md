@@ -5,7 +5,7 @@ Demonstrate the callout accessory tap not working when annotation views are behi
 
 Apple Radar 50352444 
 
-This is the workaround, figured out by @futuretap :
+This is the workaround, figured out by https://github.com/futuretap
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
     [view.superview bringSubviewToFront:view];
