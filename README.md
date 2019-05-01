@@ -7,6 +7,8 @@ Apple Radar 50352444
 
 This is the workaround, figured out by https://github.com/futuretap
 
+This goes in the MKMapViewDelegate
+
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
     [view.superview bringSubviewToFront:view];
 }
