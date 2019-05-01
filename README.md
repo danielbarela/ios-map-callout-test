@@ -1,6 +1,18 @@
 # ios-map-callout-test
 Demonstrate the callout accessory tap not working when annotation views are behind
 
+# Bug showed back up in 12.2
+
+Apple Radar 50352444 
+
+This is the workaround, figured out by @futuretap :
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+    [view.superview bringSubviewToFront:view];
+}
+
+
+# Bug which was fixed in 11.3
 Apple Radar 36027761
 
 iOS 11 MKAnnotationView rightCalloutAccessoryView button not clickable when other annotations are behind it
